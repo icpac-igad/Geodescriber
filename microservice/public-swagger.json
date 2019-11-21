@@ -1,0 +1,68 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Geodescriber",
+        "description": "## Describes geometries\n",
+        "version": "1.0.0"
+    },
+    "host": "api.skydipper.com",
+    "schemes": [
+        "https",
+        "http"
+    ],
+    "produces": [
+        "application/vnd.api+json"
+    ],
+    "paths": {
+        "/v1/geodescriber": {
+            "get": {
+                "description": "Geodescriber",
+                "tags": [
+                    "Geodescriber"
+                ],
+                "parameters": [
+                    {
+                        "name": "geostore",
+                        "in": "query",
+                        "description": "ID Hash of the geostore",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "app",
+                        "in": "query",
+                        "description": "Id of the target application",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Results obtained",
+                        "schema": {
+                            "$ref": "#/definitions/USEFORMA250"
+                        }
+                    },
+                    "404": {
+                        "description": "Geostore not found",
+                        "schema": {
+                            "$ref": "#/definitions/Errors"
+                        }
+                    },
+                    "500": {
+                        "description": "Unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Errors"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/Errors"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
