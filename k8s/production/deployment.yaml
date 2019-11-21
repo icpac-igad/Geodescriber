@@ -40,11 +40,11 @@ spec:
           - start
         env:
           - name: PORT
-            value: "4500"
+            value: "4501"
           - name: ENVIRONMENT
             value: prod
           - name: LOCAL_URL
-            value: http://{name}.gfw.svc.cluster.local:4500
+            value: http://{name}.gfw.svc.cluster.local:4501
           - name: CT_URL
             valueFrom:
                 secretKeyRef:
@@ -74,7 +74,7 @@ spec:
           - name: REDIS_URL
             value: redis://localhost:6379
         ports:
-          - containerPort: 4500
+          - containerPort: 4501
 
       - name: redis
         image: redis

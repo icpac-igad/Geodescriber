@@ -6,7 +6,7 @@ SETTINGS = {
         'level': 'DEBUG'
     },
     'service': {
-        'port': 4500
+        'port': 4501
     },
     'gee': {
         'service_account': 'skydipper@skydipper-196010.iam.gserviceaccount.com',

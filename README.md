@@ -15,7 +15,7 @@ Dynamically describe any geometry, from a geostore or valid geojson source.
 ```python
 import requests
 
-#url = "http://localhost:4500/api/v1/geodescriber"
+#url = "http://localhost:4501/api/v1/geodescriber"
 url = "https:/api.skydipper.com/v1/geodescriber"
 params = {"geostore":"4dbc95a052c9c69e4d09fe72c359a207",
           "template":"False",

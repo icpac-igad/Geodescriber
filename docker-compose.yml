@@ -1,7 +1,7 @@
 prod:
   image: vizzuality/geodescriber:1.1.0${STAGING}
   ports:
-    - "4500"
+    - "4501"
   env_file:
     - prod.env
   command: start

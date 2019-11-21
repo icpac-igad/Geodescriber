@@ -39,7 +39,7 @@ COPY ./microservice /opt/$NAME/microservice
 RUN chown $USER:$USER /opt/$NAME
 
 # Tell Docker we are going to use this ports
-EXPOSE 4500
+EXPOSE 4501
 USER $USER
 
 # Launch script
