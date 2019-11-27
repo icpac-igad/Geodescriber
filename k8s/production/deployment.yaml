@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  namespace: geodescriber
+  namespace: default
   labels:
     name: {name}
     app: geodescriber
@@ -44,7 +44,7 @@ spec:
           - name: ENVIRONMENT
             value: prod
           - name: LOCAL_URL
-            value: http://{name}.gfw.svc.cluster.local:4501
+            value: http://{name}.default.svc.cluster.local:4501
           - name: CT_URL
             valueFrom:
                 secretKeyRef:
