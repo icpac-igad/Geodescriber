@@ -5,6 +5,7 @@ import json
 import logging
 from geodescriber.errors import GeostoreNotFound
 from geodescriber.routes.api import error
+from geodescriber.services.area_service import AreaService
 from geodescriber.services.geostore_service import GeostoreService
 
 
