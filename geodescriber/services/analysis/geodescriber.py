@@ -329,7 +329,7 @@ class GeodescriberService(object):
         is_marine = stats.get('seaLandFreshwater').get('1', 0)
         is_fresh = stats.get('seaLandFreshwater').get('2', 0)
 
-        if app == 'skydipper':
+        if app == 'eacw':
             if is_marine and (is_land + is_fresh) / is_marine < 0.01:
                tmp_config['sentence'] = "It has a total area of {area_0}."
                tmp_config['items'] = {'area_0': f'{human_format(area_ha)}ha'}
@@ -353,7 +353,7 @@ class GeodescriberService(object):
         return tmp_config
 
     @staticmethod
-    def analyze(geojson, area_ha=None, lang='en', app='skydipper', template=False):
+    def analyze(geojson, area_ha=None, lang='en', app='eacw', template=False):
         """Recieve a geostore_id, language, and app argument and return a
         json serialised dic object response.
         """

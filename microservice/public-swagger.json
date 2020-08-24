@@ -5,7 +5,7 @@
         "description": "## Describes geometries\n",
         "version": "1.0.0"
     },
-    "host": "api.skydipper.com",
+    "host": "http://3.16.43.90:9000",
     "schemes": [
         "https",
         "http"

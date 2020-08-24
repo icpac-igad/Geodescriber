@@ -4,6 +4,7 @@ import os
 from dotenv import load_dotenv
 from geodescriber import app
 
+load_dotenv()
 
 # This is only used when running locally. When running live, Gunicorn runs
 # the application.

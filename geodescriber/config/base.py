@@ -9,10 +9,10 @@ SETTINGS = {
         'port': 4501
     },
     'gee': {
-        'service_account': 'skydipper@skydipper-196010.iam.gserviceaccount.com',
+        'service_account': 'earth-engine@notional-impact-169016.iam.gserviceaccount.com',
         'privatekey_file': BASE_DIR + '/privatekey.json',
         'assets': {
-            'geodescriber':'projects/wri-datalab/geodesriber-asset-v2'
+            'geodescriber': 'projects/eacw-datalab/geodesriber-asset-v2'
         },
     },
     'redis': {
