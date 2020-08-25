@@ -9,6 +9,9 @@ from geodescriber.config import SETTINGS
 from geodescriber.routes.api import error
 from geodescriber.routes.api.v1 import geodescriber_endpoints_v1
 from geodescriber.utils.files import load_config_json
+from dotenv import load_dotenv
+
+load_dotenv()
 
 logging.basicConfig(
     level=SETTINGS.get('logging', {}).get('level'),
