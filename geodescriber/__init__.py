@@ -10,15 +10,17 @@ from geodescriber.routes.api import error
 from geodescriber.routes.api.v1 import geodescriber_endpoints_v1
 from geodescriber.utils.files import load_config_json
 from dotenv import load_dotenv
+from geodescriber.utils.files import BASE_DIR, PROJECT_DIR
 
-load_dotenv()
+dotenv_path = os.path.join(BASE_DIR, '.env')
+
+load_dotenv(dotenv_path=dotenv_path)
 
 logging.basicConfig(
     level=SETTINGS.get('logging', {}).get('level'),
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     datefmt='%Y%m%d-%H:%M%p',
 )
-
 
 # Initilizing GEE
 gee = SETTINGS.get('gee')
@@ -31,7 +33,6 @@ if private_key_file:
     ee.data.setDeadline(60000)
 else:
     raise ValueError("privatekey.json file not found. Unable to authenticate EE.")
-
 
 # Flask App
 app = Flask(__name__)
