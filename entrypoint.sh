@@ -15,6 +15,10 @@ test)
 start)
   echo "Running Start"
   #        echo -e "$EE_PRIVATE_KEY" | base64 -d > privatekey.json
+  if [ -f .venv/bin/activate ]; then
+    echo "Load Python virtualenv from '.venv/bin/activate'"
+    source .venv/bin/activate
+  fi
   exec gunicorn -c gunicorn.py geodescriber:app
   ;;
 *)
