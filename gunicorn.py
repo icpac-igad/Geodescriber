@@ -1,12 +1,5 @@
 import os
 
-from dotenv import load_dotenv
-
-from geodescriber.utils.files import BASE_DIR
-
-dotenv_path = os.path.join(BASE_DIR, '.env')
-load_dotenv(dotenv_path=dotenv_path)
-
 bind = '0.0.0.0:4501'
 backlog = 2048
 

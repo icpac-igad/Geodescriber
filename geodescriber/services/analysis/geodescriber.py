@@ -387,7 +387,7 @@ class GeodescriberService(object):
                                         }).getInfo()
             logging.info(f'[Geodescriber]: stats: {stats}')
         except:
-            logging.error('[Geodescriber]: EE failed.')
+            logging.exception('[Geodescriber]: EE failed.')
             stats = {}
 
         land_sea_sentence = GeodescriberService.gen_land_sea_title(stats)
