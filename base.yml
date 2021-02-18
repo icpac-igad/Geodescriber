@@ -1,7 +1,0 @@
-base:
-  build: .
-  ports:
-    - "4501:4501"
-  environment:
-    PORT: 4501
-  container_name: geodescriber
